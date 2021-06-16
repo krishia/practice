@@ -1,0 +1,20 @@
+void sort_array(int* ary, int size) {
+	bool token = true;
+	int count = 0;
+	int pre_count = 0;
+	while (token) {
+		pre_count = count;
+		for (int i = 0; i < size - 1; ++i) {
+			if (ary[i] > ary[i + 1]) {
+				swap(ary[i], ary[i + 1]);
+				++count;
+			}
+		}
+		if (pre_count == count) {
+			token = false;
+		}
+	}
+	
+}
+
+//for c-style array
